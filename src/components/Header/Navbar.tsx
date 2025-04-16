@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MenuList } from "@/constants/MenuList";
@@ -19,7 +19,6 @@ const Navbar = () => {
           <Link
             key={item.link}
             href={item.link}
-            className="relative"
           >
             <Button
               variant="ghost"
@@ -35,8 +34,7 @@ const Navbar = () => {
                 <motion.span
                   layoutId="navbar-underline"
                   className="absolute left-0 right-0 -bottom-1 h-1 rounded bg-white/80"
-                  style={{ background: "rgba(255,255,255,0.7)" }}
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 40 }}
                 />
               )}
             </Button>
